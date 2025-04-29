@@ -2,6 +2,11 @@ package com.starter.cleancode.calculator;
 
 import java.math.BigDecimal;
 
+/**
+ * 문제 1: 아이템 가격 계산 함수 리팩토링
+ * 다음 코드는 아이템 종류(type)와 상태(status)에 따라 최종 가격을 계산하는 함수야.
+ * 매직 넘버, 변수명, 중첩 조건문 등을 개선해보자.
+ */
 public class ItemPriceCalculator {
     // Before
     // type: 1=Book, 2=Electronics, 3=Clothing
