@@ -44,8 +44,7 @@ public class UserPermissionChecker {
 
         // UserRole 안에 allowedActions 를 정의하여 매개변수로 받은 액션이 
         // 각 롤에 맞춰 허용된 액션 목록에 없다면 false 를 반환한다.
-        return role.allowedActions.stream()
-                .anyMatch(action::equals);
+        return role.isAllowing(action);
     }
 
     @AllArgsConstructor
@@ -57,6 +56,10 @@ public class UserPermissionChecker {
         ;
 
         private final List<UserAction> allowedActions;
+
+        public boolean isAllowing(UserAction action) {
+            return allowedActions.contains(action);
+        }
     }
 
     public enum UserAction {
