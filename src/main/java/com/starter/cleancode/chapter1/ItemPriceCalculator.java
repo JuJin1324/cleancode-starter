@@ -1,4 +1,4 @@
-package com.starter.cleancode.calculator;
+package com.starter.cleancode.chapter1;
 
 import java.math.BigDecimal;
 
@@ -27,6 +27,7 @@ public class ItemPriceCalculator {
         return final_p;
     }
 
+    // After
     // 의미가 더 드러나도록 메서드 명 변경: get_price -> calculatePrice
     // ItemType enum 도입으로 매직 넘버 제거 및 타입 의미 명확화
     // ItemStatus enum 도입으로 매직 넘버 제거 및 타입 의미 명확화

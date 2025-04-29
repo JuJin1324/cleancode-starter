@@ -1,10 +1,10 @@
-package com.starter.cleancode.user;
+package com.starter.cleancode.chapter1;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.starter.cleancode.user.UserPermissionChecker.UserAction.*;
-import static com.starter.cleancode.user.UserPermissionChecker.UserRole.*;
+import static com.starter.cleancode.chapter1.UserPermissionChecker.UserAction.*;
+import static com.starter.cleancode.chapter1.UserPermissionChecker.UserRole.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserPermissionCheckerTest {
@@ -16,7 +16,7 @@ class UserPermissionCheckerTest {
     }
 
     @Test
-    void testAdminPermissions() {
+    void adminPermissions() {
         // Admin should have all permissions
         assertTrue(checker.hasRightPermission(ADMIN, CREATE));
         assertTrue(checker.hasRightPermission(ADMIN, EDIT));
@@ -26,7 +26,7 @@ class UserPermissionCheckerTest {
     }
 
     @Test
-    void testEditorPermissions() {
+    void editorPermissions() {
         // Editor should have specific permissions
         assertTrue(checker.hasRightPermission(EDITOR, CREATE));
         assertTrue(checker.hasRightPermission(EDITOR, EDIT));
@@ -36,7 +36,7 @@ class UserPermissionCheckerTest {
     }
 
     @Test
-    void testViewerPermissions() {
+    void viewerPermissions() {
         // Viewer should only have VIEW permission
         assertTrue(checker.hasRightPermission(VIEWER, VIEW));
         assertFalse(checker.hasRightPermission(VIEWER, CREATE));
@@ -46,7 +46,7 @@ class UserPermissionCheckerTest {
     }
 
     @Test
-    void testAdminPermissions_before() {
+    void adminPermissions_before() {
         // Admin should have all permissions
         assertTrue(checker.checkPerm("ADMIN", "CREATE", false));
         assertTrue(checker.checkPerm("ADMIN", "EDIT", false));
@@ -56,7 +56,7 @@ class UserPermissionCheckerTest {
     }
 
     @Test
-    void testEditorPermissions_before() {
+    void editorPermissions_before() {
         // Editor should have specific permissions
         assertTrue(checker.checkPerm("EDITOR", "CREATE", false));
         assertTrue(checker.checkPerm("EDITOR", "EDIT", false));
@@ -66,7 +66,7 @@ class UserPermissionCheckerTest {
     }
 
     @Test
-    void testViewerPermissions_before() {
+    void viewerPermissions_before() {
         // Viewer should only have VIEW permission
         assertTrue(checker.checkPerm("VIEWER", "VIEW", false));
         assertFalse(checker.checkPerm("VIEWER", "CREATE", false));

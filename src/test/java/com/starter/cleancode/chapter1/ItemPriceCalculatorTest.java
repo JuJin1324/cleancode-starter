@@ -1,10 +1,10 @@
-package com.starter.cleancode.calculator;
+package com.starter.cleancode.chapter1;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.starter.cleancode.calculator.ItemPriceCalculator.ItemStatus.*;
-import static com.starter.cleancode.calculator.ItemPriceCalculator.ItemType.*;
+import static com.starter.cleancode.chapter1.ItemPriceCalculator.ItemStatus.*;
+import static com.starter.cleancode.chapter1.ItemPriceCalculator.ItemType.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ItemPriceCalculatorTest {
@@ -16,7 +16,7 @@ class ItemPriceCalculatorTest {
     }
 
     @Test
-    void testCalculatePriceForBook() {
+    void calculatePriceForBook() {
         // Test NEW book
         assertEquals(100.0, calculator.calculatePrice(BOOK, NEW, 100.0));
 
@@ -28,7 +28,7 @@ class ItemPriceCalculatorTest {
     }
 
     @Test
-    void testCalculatePriceForElectronics() {
+    void calculatePriceForElectronics() {
         ItemPriceCalculator calculator = new ItemPriceCalculator();
 
         // Test NEW electronics
@@ -42,7 +42,7 @@ class ItemPriceCalculatorTest {
     }
 
     @Test
-    void testCalculatePriceForClothing() {
+    void calculatePriceForClothing() {
         ItemPriceCalculator calculator = new ItemPriceCalculator();
 
         // Test NEW clothing
@@ -56,7 +56,7 @@ class ItemPriceCalculatorTest {
     }
 
     @Test
-    void testCalculatePriceForBook_before() {
+    void calculatePriceForBook_before() {
         // Test NEW book
         assertEquals(100.0, calculator.get_price_before(1,0, 100.0));
 
@@ -68,7 +68,7 @@ class ItemPriceCalculatorTest {
     }
 
     @Test
-    void testCalculatePriceForElectronics_before() {
+    void calculatePriceForElectronics_before() {
         ItemPriceCalculator calculator = new ItemPriceCalculator();
 
         // TODO: 기존 코드의 오류 검출
@@ -83,7 +83,7 @@ class ItemPriceCalculatorTest {
     }
 
     @Test
-    void testCalculatePriceForClothing_before() {
+    void calculatePriceForClothing_before() {
         ItemPriceCalculator calculator = new ItemPriceCalculator();
 
         // Test NEW clothing

@@ -1,4 +1,4 @@
-package com.starter.cleancode.user;
+package com.starter.cleancode.chapter1;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,6 +35,7 @@ public class UserPermissionChecker {
         return perm_ok;
     }
 
+    // After
     // boolean isOwner 를 UserAction 의 OWNER_DELETE 로 변경 구현
     public boolean hasRightPermission(UserRole role, UserAction action/*, boolean isOwner*/) {
         // 값은 할 수 있으면 변하지 않도록 불변 상태 유지를 위해서 값이 변경될 수 있는 변수인
